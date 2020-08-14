@@ -1,0 +1,28 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/leonardo/DSSC/Algorithms/Homeworks/01/src/main.c
+matrix.h
+/home/leonardo/DSSC/Algorithms/Homeworks/01/src/matrix.h
+strassen.h
+/home/leonardo/DSSC/Algorithms/Homeworks/01/src/strassen.h
+test.h
+/home/leonardo/DSSC/Algorithms/Homeworks/01/src/test.h
+stdio.h
+-
+
+include/matrix.h
+stdlib.h
+-
+assert.h
+-
+
+include/strassen.h
+
+include/test.h
+
