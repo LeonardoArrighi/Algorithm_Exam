@@ -1,3 +1,3 @@
-/home/leonardo/DSSC/Algorithms/Homeworks/01/CMakeFiles/rebuild_cache.dir
-/home/leonardo/DSSC/Algorithms/Homeworks/01/CMakeFiles/strassen_test.dir
-/home/leonardo/DSSC/Algorithms/Homeworks/01/CMakeFiles/edit_cache.dir
+/home/leonardo/DSSC/Algorithms/Homeworks/Algorithm_Exam/01/CMakeFiles/rebuild_cache.dir
+/home/leonardo/DSSC/Algorithms/Homeworks/Algorithm_Exam/01/CMakeFiles/strassen_test.dir
+/home/leonardo/DSSC/Algorithms/Homeworks/Algorithm_Exam/01/CMakeFiles/edit_cache.dir

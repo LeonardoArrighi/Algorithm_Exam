@@ -1,4 +1,4 @@
-# Install script for directory: /home/leonardo/DSSC/Algorithms/Homeworks/01
+# Install script for directory: /home/leonardo/DSSC/Algorithms/Homeworks/Algorithm_Exam/01
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -50,5 +50,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/leonardo/DSSC/Algorithms/Homeworks/01/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/leonardo/DSSC/Algorithms/Homeworks/Algorithm_Exam/01/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

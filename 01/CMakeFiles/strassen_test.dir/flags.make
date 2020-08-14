@@ -4,7 +4,7 @@
 # compile C with /usr/bin/cc
 C_DEFINES = 
 
-C_INCLUDES = -I/home/leonardo/DSSC/Algorithms/Homeworks/01/include
+C_INCLUDES = -I/home/leonardo/DSSC/Algorithms/Homeworks/Algorithm_Exam/01/include
 
 C_FLAGS = -O3 -DNDEBUG
 
