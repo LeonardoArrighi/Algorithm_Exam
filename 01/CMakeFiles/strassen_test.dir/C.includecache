@@ -6,34 +6,10 @@
 
 #IncludeRegexTransform: 
 
-/home/leonardo/DSSC/Algorithms/Homeworks/Algorithm_Exam/01/src/main.c
-matrix.h
-/home/leonardo/DSSC/Algorithms/Homeworks/Algorithm_Exam/01/src/matrix.h
-strassen.h
-/home/leonardo/DSSC/Algorithms/Homeworks/Algorithm_Exam/01/src/strassen.h
-test.h
-/home/leonardo/DSSC/Algorithms/Homeworks/Algorithm_Exam/01/src/test.h
-stdio.h
--
-
-/home/leonardo/DSSC/Algorithms/Homeworks/Algorithm_Exam/01/src/matrix.c
-stdio.h
--
-stdlib.h
--
-assert.h
--
-matrix.h
-/home/leonardo/DSSC/Algorithms/Homeworks/Algorithm_Exam/01/src/matrix.h
-
 /home/leonardo/DSSC/Algorithms/Homeworks/Algorithm_Exam/01/src/strassen.c
 matrix.h
 /home/leonardo/DSSC/Algorithms/Homeworks/Algorithm_Exam/01/src/matrix.h
 stdio.h
--
-
-/home/leonardo/DSSC/Algorithms/Homeworks/Algorithm_Exam/01/src/test.c
-time.h
 -
 
 include/matrix.h
@@ -41,10 +17,4 @@ stdlib.h
 -
 assert.h
 -
-
-include/strassen.h
-stdio.h
--
-
-include/test.h
 

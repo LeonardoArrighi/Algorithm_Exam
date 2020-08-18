@@ -241,8 +241,8 @@ void strassen_aux(float** C, float const* const* const A, float const* const* co
 // auxiliary function
 size_t getmax (size_t x, size_t y, size_t z)
 {
-    if(x > y) x = y;
-    if(x > z) x = z;
+    if(x < y) x = y;
+    if(x < z) x = z;
     return x;
 }
 
@@ -274,7 +274,7 @@ void strassen_aux_gen(float** C, float const* const* const A, float const* const
                       const size_t C_f_col, const size_t A_f_row, const size_t A_f_col, const size_t B_f_row,
                       const size_t B_f_col, const size_t A_row, const size_t A_col, const size_t B_col)
 {
-    if ((A_row <= (1 << 6)) && (A_col <= (1 << 6)) && (B_col <= (1 << 6)))
+    if (((A_row <= (1 << 6)) && (A_col <= (1 << 6)) && (B_col <= (1 << 6))) || (A_row == 1) || (A_col == 1) || (B_col == 1))
     {
         naive_aux_gen(C, A, B, C_f_row, C_f_col, A_f_row, A_f_col, B_f_row, B_f_col, A_row, A_col, B_col);
         return;
@@ -305,8 +305,8 @@ void strassen_aux_gen(float** C, float const* const* const A, float const* const
             // C11 = A11 x B11
             // c21 = a21 x B11
             strassen_aux_gen(C, A, B, C_f_row + A_row - resto_A_row, C_f_col,
-                             A_f_row, A_f_col, B_f_row, B_f_col,
-                             A_row - resto_A_row, A_col - resto_A_col, B_col - resto_B_col);
+                             A_f_row + A_row - resto_A_row, A_f_col, B_f_row, B_f_col,
+                             1, A_col - resto_A_col, B_col - resto_B_col);
             
         }
         if (resto_A_row != 0 && resto_A_col != 0)
@@ -353,11 +353,11 @@ void strassen_aux_gen(float** C, float const* const* const A, float const* const
         {
             // C11 = A11 x B11
             // c12 = A11 x b12
-            strassen_aux_gen(C, A, B, C_f_row, C_f_col + (B_col - resto_B_col), 
+            strassen_aux_gen(C, A, B, C_f_row, C_f_col + B_col - resto_B_col, 
                              A_f_row, A_f_col, B_f_row, B_f_col + B_col - resto_B_col,
                              A_row - resto_A_row, A_col - resto_A_col, 1);        
         }
-        if (resto_A_col != 0 && resto_B_col != 0)
+        if (resto_B_col != 0 && resto_A_col != 0)
         {
             // C11 = A11 x B11 + a12 x b21
             // c12 = A11 x b12 + a12 x b22 
@@ -378,7 +378,7 @@ void strassen_aux_gen(float** C, float const* const* const A, float const* const
             // c21 = a21 x B11 + a22 x b21
             // c22 = a21 x b12 + a22 x b22
             float** to_delete = allocate_matrix(1, 1);
-            strassen_aux_gen(to_delete, A, B, 0, 0, A_f_row, A_f_col + A_col - resto_A_col, 
+            strassen_aux_gen(to_delete, A, B, 0, 0, A_f_row + A_row - resto_A_row, A_f_col + A_col - resto_A_col, 
                              B_f_row + A_col - resto_A_col, B_f_col + B_col - resto_B_col, 
                              1, 1, 1);
             sum_matrix_blocks_gen(C, (const float* const* const)C, (const float* const* const)to_delete,
@@ -396,7 +396,7 @@ void strassen_aux_gen(float** C, float const* const* const A, float const* const
     size_t B_col_e = B_col / 2;
 
     size_t max = getmax(A_row_e, A_col_e, B_col_e);
-
+    
     float*** S = (float***)malloc(sizeof(float**) * 2);
     S[0] = allocate_matrix(max, max);
     S[1] = allocate_matrix(max, max);
