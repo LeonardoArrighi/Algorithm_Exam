@@ -37,7 +37,7 @@ void swap_keys(binheap_type * H, unsigned int a, unsigned int b)
     void* tmp = malloc(H->key_size);
 
     memcpy(tmp, pa, H->key_size);
-    memcpy(tmp, pb, H->key_size);
+    memcpy(pa, pb, H->key_size);
     memcpy(pb, tmp, H->key_size);
     
     free(tmp);
@@ -57,6 +57,7 @@ void heapify(binheap_type* H, unsigned int node)
         {
            dst_node= child;
         }
+
         child = LEFT(node);
         if (IS_VALID_NODE(H, child) && H->leq(ADDR(H, child), ADDR(H, node)))
         {
@@ -150,28 +151,28 @@ void delete_heap(binheap_type *H)
 
 const void *decrease_key(binheap_type *H, void *node, const void *value)
 {
-    unsigned int node_idx = INDEX_OF(H, node);
+    unsigned int node_x = INDEX_OF(H, node);
 
-    if (!IS_VALID_NODE(H, node_idx) || !(H->leq(value, node)))
+    if (!IS_VALID_NODE(H, node_x) || !(H->leq(value, node)))
     {
         return NULL;
     }
 
     memcpy(node, value, H->key_size);
 
-    unsigned int parent_idx = PARENT(node_idx);
+    unsigned int parent_idx = PARENT(node_x);
     void* parent = ADDR(H, parent_idx);
 
-    while ((node_idx != 0) && (!H->leq(parent, node)))
+    while ((node_x != 0) && (!H->leq(parent, node)))
     {
         // swap keys of parent and node
-        swap_keys(H, parent_idx, node_idx);
+        swap_keys(H, parent_idx, node_x);
 
         // node's parent
         node = parent;
-        node_idx = parent_idx;
+        node_x = parent_idx;
 
-        parent_idx = PARENT(node_idx);
+        parent_idx = PARENT(node_x);
         parent = ADDR(H, parent_idx);
     }
 
@@ -203,16 +204,16 @@ const void *insert_value(binheap_type *H, const void *value)
     return decrease_key(H, new_node_address, value);
 }
 
-void print_heap(const binheap_type *H, 
-                void (*key_printer)(const void *value))
+void print_heap(const binheap_type* H, void (*key_printer)(const void* value))
 {
-    unsigned int next_level_node = 1;  // store the index of the leftmost node of the next level
+    unsigned int next_level = 1;  // store the index of the
+                                       // leftmost node of the next level
     for (unsigned int node = 0; node < H->num_of_elem; node++)
     {
-        if (node == next_level_node)
+        if (node == next_level)
         {
             printf("\n");
-            next_level_node = LEFT(node);
+            next_level = LEFT(node);
         }
         else
         {

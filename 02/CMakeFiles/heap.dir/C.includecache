@@ -6,19 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/leonardo/DSSC/Algorithms/Homeworks/Algorithm_Exam/02/src/binheap.c
-binheap.h
--
-string.h
--
-stdio.h
--
-
-include/binheap.h
+/home/leonardo/DSSC/Algorithms/Homeworks/Algorithm_Exam/02/src/total_orders.c
 stdlib.h
 -
-total_orders.h
--
-
-include/total_orders.h
 

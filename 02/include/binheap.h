@@ -143,7 +143,20 @@ const void *insert_value(binheap_type *H, const void *value);
  * @param H is the heap in which the key value should be decreased.
  * @param key_printer is a function to print a key value.
  **********************************************************************/
-void print_heap(const binheap_type *H, 
-                void (*key_printer)(const void *value));
+void print_heap(const binheap_type* H, void (*key_printer)(const void* value));
+
+/**********************************************************************
+ * Restore the heap property.
+ *
+ * This function restore the property of a sub-heap by swapping the 
+ * minimum node (w.r.t. the property) with the root of the considered
+ * sub-heap.
+ * Recalling it recursively we can restore the property of all the 
+ * heap. 
+ *
+ * @param H is the heap in which we restore the property.
+ * @param node is the root of the heap H.
+ **********************************************************************/
+void heapify(binheap_type* H, unsigned int node);
 
 #endif // __BIN_HEAP__
