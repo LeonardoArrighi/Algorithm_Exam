@@ -7,45 +7,45 @@
 #include <stdbool.h>
 #include <limits.h>
 
-#define MAX_SIZE 15
+#define MAX_SIZE 13
 
-void int_printer(const void *value)
+void int_printer(const void* value)
 {
-  printf("%d", *((const int *)value));
+  printf("%d", *((const int* )value));
 }
 
 int main(){
-
-	int *B=(int *)malloc(sizeof(int)*MAX_SIZE);
+	int* try=(int*)malloc(sizeof(int) * MAX_SIZE);
   	
-  	for(int k=0; k<MAX_SIZE; k++)
+  	for(int i = 0; i < MAX_SIZE; i++)
     {
-        B[k] = (rand() % (MAX_SIZE + 1)); 
+        try[i] = (rand() % (MAX_SIZE + 1)); 
   	}
 
-	printf("Call build_heap\n");
-	binheap_type *minH= build_heap(B,MAX_SIZE-2,MAX_SIZE,sizeof(int),leq_int);
-	print_heap(minH, int_printer);
+	printf("Build_heap\n");
+	binheap_type * H1 = build_heap(try, MAX_SIZE-2, MAX_SIZE, sizeof(int), leq_int);
+	print_heap(H1, int_printer);
 	
-	printf("Call heapify on %d \n", B[MAX_SIZE/2]);
-	heapify(minH, B[0]);
-	print_heap(minH, int_printer);
-	
-	printf("Call is_heap_empty  (False=0) (True=1) \n");
-	printf("Output: %d \n", is_heap_empty(minH));
-	
-	printf("Call min_value: \n");
-	int s = *( (int*) min_value(minH) );
-	printf("Output: %d \n", s );
-	
-	
-	printf("Call insert value = 0\n");
-	int i=0;
-	insert_value(minH, &i);
-	print_heap(minH, int_printer);	
+	printf("\n\nHeapify on %d \n", try[MAX_SIZE/2]);
+	heapify(H1, try[0]);
+	print_heap(H1, int_printer);
 
-	printf("Call delete_heap\n");
-	delete_heap(minH);
+	printf("\n\nIs_heap_empty? %d \n\n", is_heap_empty(H1));
+	
+	int min = *((int*) min_value(H1));
+	printf("Min_value: %d\n\n", min);
+	
+	
+	int insert = 5;
+	printf("Insert_value = %d\n", insert);
+	insert_value(H1, &insert);
+	print_heap(H1, int_printer);	
+
+	delete_heap(H1);
 
 	return 0;
+
+	
+	
 }
+
