@@ -6,12 +6,22 @@
 
 #IncludeRegexTransform: 
 
-/home/leonardo/DSSC/Algorithms/Homeworks/Algorithm_Exam/03/src/binheap.c
+/home/leonardo/DSSC/Algorithms/Homeworks/Algorithm_Exam/03/src/main.c
 binheap.h
--
+/home/leonardo/DSSC/Algorithms/Homeworks/Algorithm_Exam/03/src/binheap.h
+total_orders.h
+/home/leonardo/DSSC/Algorithms/Homeworks/Algorithm_Exam/03/src/total_orders.h
 string.h
 -
 stdio.h
+-
+time.h
+-
+stdlib.h
+-
+stdbool.h
+-
+limits.h
 -
 
 include/binheap.h

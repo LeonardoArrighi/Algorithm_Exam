@@ -7,7 +7,7 @@
 #include <stdbool.h>
 #include <limits.h>
 
-#define MAX_SIZE 14
+#define MAX_SIZE 15
 
 void int_printer(const void* value)
 {
@@ -26,17 +26,17 @@ int main(){
 	binheap_type * H1 = build_heap(try, MAX_SIZE-2, MAX_SIZE, sizeof(int), leq_int);
 	print_heap(H1, int_printer);
 	
-	printf("\n\nHeapify on %d \n", try[MAX_SIZE/2]);
-	heapify(H1, try[0]);
+	printf("\nHeapify\n");
+	heapify(H1, 0);
 	print_heap(H1, int_printer);
 
-	printf("\n\nIs_heap_empty? %d \n\n", is_heap_empty(H1));
+	printf("\nIs_heap_empty? %d \n\n", is_heap_empty(H1));
 	
 	int min = *((int*) min_value(H1));
 	printf("Min_value: %d\n\n", min);
 	
 	
-	int insert = 5;
+	int insert = 1;
 	printf("Insert_value = %d\n", insert);
 	insert_value(H1, &insert);
 	print_heap(H1, int_printer);	
