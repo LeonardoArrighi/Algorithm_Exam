@@ -58,17 +58,23 @@ void heapify(binheap_type* H, unsigned int node)
         node_p = POS(H, node);
 
         child_p = RIGHT(node_p);
-        if (IS_VALID_NODE(H, child_p) && (H->leq(ADDR(H, child), ADDR(H, dst_node))))
+        if(IS_VALID_NODE(H, child_p))
         {
             child = KEY(H, child_p);
-            dst_node = child;
+            if(H->leq(ADDR(H, child), ADDR(H, dst_node)))
+            {
+                dst_node = child;
+            }
         }
 
         child_p = LEFT(node_p);
-        if (IS_VALID_NODE(H, child_p) && (H->leq(ADDR(H, child), ADDR(H, dst_node))))
+        if(IS_VALID_NODE(H, child_p))
         {
             child = KEY(H, child_p);
-            dst_node = child;
+            if(H->leq(ADDR(H, child), ADDR(H, dst_node)))
+            {
+                dst_node = child;
+            }
         }
 
         if(dst_node != node)
@@ -153,7 +159,7 @@ binheap_type* build_heap(void *A,
     {
         heapify(H, KEY(H, i));
     }
-    heapify(H, KEY(H, 0));
+    //heapify(H, KEY(H, 0));
 
     return H;
 }
@@ -241,10 +247,4 @@ void print_heap(const binheap_type* H, void (*key_printer)(const void* value))
     }
 
     printf("\n\n");
-    for (unsigned int i = 0; i < H->max_size; i++)
-    {
-        printf(" ");
-        key_printer(ADDR(H, i));
-    }
-    printf("\n");
 }
