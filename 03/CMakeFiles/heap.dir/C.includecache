@@ -1,0 +1,24 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/leonardo/DSSC/Algorithms/Homeworks/Algorithm_Exam/03/src/binheap.c
+binheap.h
+-
+string.h
+-
+stdio.h
+-
+
+include/binheap.h
+stdlib.h
+-
+total_orders.h
+-
+
+include/total_orders.h
+

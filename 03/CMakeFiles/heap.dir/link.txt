@@ -1,0 +1,1 @@
+/usr/bin/cc -O3 -DNDEBUG -rdynamic CMakeFiles/heap.dir/src/main.c.o CMakeFiles/heap.dir/src/binheap.c.o CMakeFiles/heap.dir/src/total_orders.c.o -o heap 
