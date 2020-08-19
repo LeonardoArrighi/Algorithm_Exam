@@ -6,9 +6,13 @@
 
 #IncludeRegexTransform: 
 
-/home/leonardo/DSSC/Algorithms/Homeworks/Algorithm_Exam/01/src/strassen.c
+/home/leonardo/DSSC/Algorithms/Homeworks/Algorithm_Exam/01/src/main.c
 matrix.h
 /home/leonardo/DSSC/Algorithms/Homeworks/Algorithm_Exam/01/src/matrix.h
+strassen.h
+/home/leonardo/DSSC/Algorithms/Homeworks/Algorithm_Exam/01/src/strassen.h
+test.h
+/home/leonardo/DSSC/Algorithms/Homeworks/Algorithm_Exam/01/src/test.h
 stdio.h
 -
 
@@ -17,4 +21,10 @@ stdlib.h
 -
 assert.h
 -
+
+include/strassen.h
+stdio.h
+-
+
+include/test.h
 
