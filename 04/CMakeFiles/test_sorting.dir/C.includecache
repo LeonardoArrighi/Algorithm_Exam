@@ -1,0 +1,28 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/leonardo/DSSC/Algorithms/Homeworks/Algorithm_Exam/04/src/quick_sort.c
+quick_sort.h
+/home/leonardo/DSSC/Algorithms/Homeworks/Algorithm_Exam/04/src/quick_sort.h
+swap.h
+/home/leonardo/DSSC/Algorithms/Homeworks/Algorithm_Exam/04/src/swap.h
+total_order.h
+/home/leonardo/DSSC/Algorithms/Homeworks/Algorithm_Exam/04/src/total_order.h
+
+include/quick_sort.h
+stdlib.h
+-
+total_order.h
+include/total_order.h
+
+include/swap.h
+stdlib.h
+-
+
+include/total_order.h
+
