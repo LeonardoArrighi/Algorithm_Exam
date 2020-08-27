@@ -149,7 +149,7 @@ void delete_heap(binheap_type *H)
     free(H);   
 }
 
-const void *decrease_key(binheap_type *H, void *node, const void *value)
+const void* decrease_key(binheap_type *H, void *node, const void *value)
 {
     unsigned int node_x = INDEX_OF(H, node);
 
@@ -179,7 +179,7 @@ const void *decrease_key(binheap_type *H, void *node, const void *value)
     return node;
 }
 
-const void *insert_value(binheap_type *H, const void *value)
+const void* insert_value(binheap_type *H, const void *value)
 {
     // if heap is full
     if (H->max_size == H->num_of_elem)

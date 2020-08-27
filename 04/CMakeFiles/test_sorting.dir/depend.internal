@@ -8,6 +8,7 @@ CMakeFiles/test_sorting.dir/src/bubble_sort.c.o
  include/total_order.h
 CMakeFiles/test_sorting.dir/src/heap_sort.c.o
  /home/leonardo/DSSC/Algorithms/Homeworks/Algorithm_Exam/04/src/heap_sort.c
+ include/binheap.h
  include/heap_sort.h
  include/total_order.h
 CMakeFiles/test_sorting.dir/src/insertion_sort.c.o
@@ -17,6 +18,7 @@ CMakeFiles/test_sorting.dir/src/insertion_sort.c.o
  include/total_order.h
 CMakeFiles/test_sorting.dir/src/main.c.o
  /home/leonardo/DSSC/Algorithms/Homeworks/Algorithm_Exam/04/src/main.c
+ include/binheap.h
  include/bubble_sort.h
  include/heap_sort.h
  include/insertion_sort.h

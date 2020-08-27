@@ -7,6 +7,7 @@ CMakeFiles/test_sorting.dir/src/bubble_sort.c.o: include/swap.h
 CMakeFiles/test_sorting.dir/src/bubble_sort.c.o: include/total_order.h
 
 CMakeFiles/test_sorting.dir/src/heap_sort.c.o: src/heap_sort.c
+CMakeFiles/test_sorting.dir/src/heap_sort.c.o: include/binheap.h
 CMakeFiles/test_sorting.dir/src/heap_sort.c.o: include/heap_sort.h
 CMakeFiles/test_sorting.dir/src/heap_sort.c.o: include/total_order.h
 
@@ -16,6 +17,7 @@ CMakeFiles/test_sorting.dir/src/insertion_sort.c.o: include/swap.h
 CMakeFiles/test_sorting.dir/src/insertion_sort.c.o: include/total_order.h
 
 CMakeFiles/test_sorting.dir/src/main.c.o: src/main.c
+CMakeFiles/test_sorting.dir/src/main.c.o: include/binheap.h
 CMakeFiles/test_sorting.dir/src/main.c.o: include/bubble_sort.h
 CMakeFiles/test_sorting.dir/src/main.c.o: include/heap_sort.h
 CMakeFiles/test_sorting.dir/src/main.c.o: include/insertion_sort.h
