@@ -13,7 +13,7 @@ int partition(void* A, const size_t elem_size,
 
     while(i <= j)
     {
-        if(!(leq(A + p * elem_size, A + i * elem_size)))
+        if(!(leq(A + i * elem_size, A + p * elem_size)))
         {
             swap(A + i * elem_size, A + j * elem_size, elem_size);
             j--;

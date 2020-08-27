@@ -64,7 +64,6 @@ void quick_sort(void *A, const unsigned int n,
  * @param elem_size is the type size in bytes of the elements in A.
  * @param leq is the total order to be satisfied by the sorting.
  **********************************************************************/
-
 void quick(void* A, void* idx_l, void* idx_r,
            const size_t elem_size, 
            total_order leq);           
