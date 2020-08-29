@@ -1,4 +1,5 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/test_sorting.dir/src/binheap.c.o"
   "CMakeFiles/test_sorting.dir/src/bubble_sort.c.o"
   "CMakeFiles/test_sorting.dir/src/heap_sort.c.o"
   "CMakeFiles/test_sorting.dir/src/insertion_sort.c.o"

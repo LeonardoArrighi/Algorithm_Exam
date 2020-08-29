@@ -7,6 +7,7 @@
 #include "selection_sort.h"
 #include "heap_sort.h"
 #include "utilities.h"
+#include "binheap.h"
 
 #define MAX_SIZE_ALL (1<<13)
 #define MAX_SIZE_NLOGN (1<<20)
@@ -30,6 +31,10 @@ void test_and_print(void (*sort)(void *A, const unsigned int n,
     fflush(stdout);
 }
 
+void int_printer(const void* value)
+{
+  printf("%d", *((const int* )value));
+}
 
 int main(int argc, char *argv[])
 {
@@ -103,22 +108,22 @@ int main(int argc, char *argv[])
                        leq_int, NUM_OF_REPETITIONS);
     }
     printf("\n\n\n");
-    // printf("Size\tQuick Sort\tQuick Sort +\tHeap Sort\n");
-    // printf("    \t          \t  Select\n");
-    // printf("    \t(Random Case)\t(Random Case)\t");
-    // for (; (1<<i)<=MAX_SIZE_NLOGN; i++) {
-    //     const unsigned int A_size=1<<i;
-    //     printf("\n2^%d",i);
-    //     test_and_print(quick_sort, A,
-    //                    A_size, sizeof(int),
-    //                    leq_int, NUM_OF_REPETITIONS);
-    //     test_and_print(quick_sort_select, A,
-    //                    A_size, sizeof(int),
-    //                    leq_int, NUM_OF_REPETITIONS);
-    //     test_and_print(heap_sort, A,
-    //                    A_size, sizeof(int),
-    //                    leq_int, NUM_OF_REPETITIONS);
-    // }
+    printf("Size\tQuick Sort\tQuick Sort +\tHeap Sort\n");
+    printf("    \t          \t  Select\n");
+    printf("    \t(Random Case)\t(Random Case)\t");
+    for (; (1<<i)<=MAX_SIZE_NLOGN; i++) {
+        const unsigned int A_size=1<<i;
+        printf("\n2^%d",i);
+        test_and_print(quick_sort, A,
+                       A_size, sizeof(int),
+                       leq_int, NUM_OF_REPETITIONS);
+        test_and_print(quick_sort_select, A,
+                       A_size, sizeof(int),
+                       leq_int, NUM_OF_REPETITIONS);
+        test_and_print(heap_sort, A,
+                       A_size, sizeof(int),
+                       leq_int, NUM_OF_REPETITIONS);
+    }
 
     printf("\n");
 

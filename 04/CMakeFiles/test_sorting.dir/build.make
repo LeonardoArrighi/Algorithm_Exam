@@ -76,9 +76,22 @@ include CMakeFiles/test_sorting.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/test_sorting.dir/flags.make
 
+CMakeFiles/test_sorting.dir/src/binheap.c.o: CMakeFiles/test_sorting.dir/flags.make
+CMakeFiles/test_sorting.dir/src/binheap.c.o: src/binheap.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/leonardo/DSSC/Algorithms/Homeworks/Algorithm_Exam/04/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/test_sorting.dir/src/binheap.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/test_sorting.dir/src/binheap.c.o -c /home/leonardo/DSSC/Algorithms/Homeworks/Algorithm_Exam/04/src/binheap.c
+
+CMakeFiles/test_sorting.dir/src/binheap.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/test_sorting.dir/src/binheap.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/leonardo/DSSC/Algorithms/Homeworks/Algorithm_Exam/04/src/binheap.c > CMakeFiles/test_sorting.dir/src/binheap.c.i
+
+CMakeFiles/test_sorting.dir/src/binheap.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/test_sorting.dir/src/binheap.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/leonardo/DSSC/Algorithms/Homeworks/Algorithm_Exam/04/src/binheap.c -o CMakeFiles/test_sorting.dir/src/binheap.c.s
+
 CMakeFiles/test_sorting.dir/src/bubble_sort.c.o: CMakeFiles/test_sorting.dir/flags.make
 CMakeFiles/test_sorting.dir/src/bubble_sort.c.o: src/bubble_sort.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/leonardo/DSSC/Algorithms/Homeworks/Algorithm_Exam/04/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/test_sorting.dir/src/bubble_sort.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/leonardo/DSSC/Algorithms/Homeworks/Algorithm_Exam/04/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/test_sorting.dir/src/bubble_sort.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/test_sorting.dir/src/bubble_sort.c.o -c /home/leonardo/DSSC/Algorithms/Homeworks/Algorithm_Exam/04/src/bubble_sort.c
 
 CMakeFiles/test_sorting.dir/src/bubble_sort.c.i: cmake_force
@@ -91,7 +104,7 @@ CMakeFiles/test_sorting.dir/src/bubble_sort.c.s: cmake_force
 
 CMakeFiles/test_sorting.dir/src/heap_sort.c.o: CMakeFiles/test_sorting.dir/flags.make
 CMakeFiles/test_sorting.dir/src/heap_sort.c.o: src/heap_sort.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/leonardo/DSSC/Algorithms/Homeworks/Algorithm_Exam/04/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/test_sorting.dir/src/heap_sort.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/leonardo/DSSC/Algorithms/Homeworks/Algorithm_Exam/04/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/test_sorting.dir/src/heap_sort.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/test_sorting.dir/src/heap_sort.c.o -c /home/leonardo/DSSC/Algorithms/Homeworks/Algorithm_Exam/04/src/heap_sort.c
 
 CMakeFiles/test_sorting.dir/src/heap_sort.c.i: cmake_force
@@ -104,7 +117,7 @@ CMakeFiles/test_sorting.dir/src/heap_sort.c.s: cmake_force
 
 CMakeFiles/test_sorting.dir/src/insertion_sort.c.o: CMakeFiles/test_sorting.dir/flags.make
 CMakeFiles/test_sorting.dir/src/insertion_sort.c.o: src/insertion_sort.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/leonardo/DSSC/Algorithms/Homeworks/Algorithm_Exam/04/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/test_sorting.dir/src/insertion_sort.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/leonardo/DSSC/Algorithms/Homeworks/Algorithm_Exam/04/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/test_sorting.dir/src/insertion_sort.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/test_sorting.dir/src/insertion_sort.c.o -c /home/leonardo/DSSC/Algorithms/Homeworks/Algorithm_Exam/04/src/insertion_sort.c
 
 CMakeFiles/test_sorting.dir/src/insertion_sort.c.i: cmake_force
@@ -117,7 +130,7 @@ CMakeFiles/test_sorting.dir/src/insertion_sort.c.s: cmake_force
 
 CMakeFiles/test_sorting.dir/src/main.c.o: CMakeFiles/test_sorting.dir/flags.make
 CMakeFiles/test_sorting.dir/src/main.c.o: src/main.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/leonardo/DSSC/Algorithms/Homeworks/Algorithm_Exam/04/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/test_sorting.dir/src/main.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/leonardo/DSSC/Algorithms/Homeworks/Algorithm_Exam/04/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/test_sorting.dir/src/main.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/test_sorting.dir/src/main.c.o -c /home/leonardo/DSSC/Algorithms/Homeworks/Algorithm_Exam/04/src/main.c
 
 CMakeFiles/test_sorting.dir/src/main.c.i: cmake_force
@@ -130,7 +143,7 @@ CMakeFiles/test_sorting.dir/src/main.c.s: cmake_force
 
 CMakeFiles/test_sorting.dir/src/quick_sort.c.o: CMakeFiles/test_sorting.dir/flags.make
 CMakeFiles/test_sorting.dir/src/quick_sort.c.o: src/quick_sort.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/leonardo/DSSC/Algorithms/Homeworks/Algorithm_Exam/04/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/test_sorting.dir/src/quick_sort.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/leonardo/DSSC/Algorithms/Homeworks/Algorithm_Exam/04/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object CMakeFiles/test_sorting.dir/src/quick_sort.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/test_sorting.dir/src/quick_sort.c.o -c /home/leonardo/DSSC/Algorithms/Homeworks/Algorithm_Exam/04/src/quick_sort.c
 
 CMakeFiles/test_sorting.dir/src/quick_sort.c.i: cmake_force
@@ -143,7 +156,7 @@ CMakeFiles/test_sorting.dir/src/quick_sort.c.s: cmake_force
 
 CMakeFiles/test_sorting.dir/src/select.c.o: CMakeFiles/test_sorting.dir/flags.make
 CMakeFiles/test_sorting.dir/src/select.c.o: src/select.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/leonardo/DSSC/Algorithms/Homeworks/Algorithm_Exam/04/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object CMakeFiles/test_sorting.dir/src/select.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/leonardo/DSSC/Algorithms/Homeworks/Algorithm_Exam/04/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building C object CMakeFiles/test_sorting.dir/src/select.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/test_sorting.dir/src/select.c.o -c /home/leonardo/DSSC/Algorithms/Homeworks/Algorithm_Exam/04/src/select.c
 
 CMakeFiles/test_sorting.dir/src/select.c.i: cmake_force
@@ -156,7 +169,7 @@ CMakeFiles/test_sorting.dir/src/select.c.s: cmake_force
 
 CMakeFiles/test_sorting.dir/src/selection_sort.c.o: CMakeFiles/test_sorting.dir/flags.make
 CMakeFiles/test_sorting.dir/src/selection_sort.c.o: src/selection_sort.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/leonardo/DSSC/Algorithms/Homeworks/Algorithm_Exam/04/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building C object CMakeFiles/test_sorting.dir/src/selection_sort.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/leonardo/DSSC/Algorithms/Homeworks/Algorithm_Exam/04/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building C object CMakeFiles/test_sorting.dir/src/selection_sort.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/test_sorting.dir/src/selection_sort.c.o -c /home/leonardo/DSSC/Algorithms/Homeworks/Algorithm_Exam/04/src/selection_sort.c
 
 CMakeFiles/test_sorting.dir/src/selection_sort.c.i: cmake_force
@@ -169,7 +182,7 @@ CMakeFiles/test_sorting.dir/src/selection_sort.c.s: cmake_force
 
 CMakeFiles/test_sorting.dir/src/swap.c.o: CMakeFiles/test_sorting.dir/flags.make
 CMakeFiles/test_sorting.dir/src/swap.c.o: src/swap.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/leonardo/DSSC/Algorithms/Homeworks/Algorithm_Exam/04/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building C object CMakeFiles/test_sorting.dir/src/swap.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/leonardo/DSSC/Algorithms/Homeworks/Algorithm_Exam/04/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building C object CMakeFiles/test_sorting.dir/src/swap.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/test_sorting.dir/src/swap.c.o -c /home/leonardo/DSSC/Algorithms/Homeworks/Algorithm_Exam/04/src/swap.c
 
 CMakeFiles/test_sorting.dir/src/swap.c.i: cmake_force
@@ -182,7 +195,7 @@ CMakeFiles/test_sorting.dir/src/swap.c.s: cmake_force
 
 CMakeFiles/test_sorting.dir/src/total_order.c.o: CMakeFiles/test_sorting.dir/flags.make
 CMakeFiles/test_sorting.dir/src/total_order.c.o: src/total_order.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/leonardo/DSSC/Algorithms/Homeworks/Algorithm_Exam/04/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building C object CMakeFiles/test_sorting.dir/src/total_order.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/leonardo/DSSC/Algorithms/Homeworks/Algorithm_Exam/04/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building C object CMakeFiles/test_sorting.dir/src/total_order.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/test_sorting.dir/src/total_order.c.o -c /home/leonardo/DSSC/Algorithms/Homeworks/Algorithm_Exam/04/src/total_order.c
 
 CMakeFiles/test_sorting.dir/src/total_order.c.i: cmake_force
@@ -195,7 +208,7 @@ CMakeFiles/test_sorting.dir/src/total_order.c.s: cmake_force
 
 CMakeFiles/test_sorting.dir/src/utilities.c.o: CMakeFiles/test_sorting.dir/flags.make
 CMakeFiles/test_sorting.dir/src/utilities.c.o: src/utilities.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/leonardo/DSSC/Algorithms/Homeworks/Algorithm_Exam/04/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building C object CMakeFiles/test_sorting.dir/src/utilities.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/leonardo/DSSC/Algorithms/Homeworks/Algorithm_Exam/04/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building C object CMakeFiles/test_sorting.dir/src/utilities.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/test_sorting.dir/src/utilities.c.o -c /home/leonardo/DSSC/Algorithms/Homeworks/Algorithm_Exam/04/src/utilities.c
 
 CMakeFiles/test_sorting.dir/src/utilities.c.i: cmake_force
@@ -208,6 +221,7 @@ CMakeFiles/test_sorting.dir/src/utilities.c.s: cmake_force
 
 # Object files for target test_sorting
 test_sorting_OBJECTS = \
+"CMakeFiles/test_sorting.dir/src/binheap.c.o" \
 "CMakeFiles/test_sorting.dir/src/bubble_sort.c.o" \
 "CMakeFiles/test_sorting.dir/src/heap_sort.c.o" \
 "CMakeFiles/test_sorting.dir/src/insertion_sort.c.o" \
@@ -222,6 +236,7 @@ test_sorting_OBJECTS = \
 # External object files for target test_sorting
 test_sorting_EXTERNAL_OBJECTS =
 
+test_sorting: CMakeFiles/test_sorting.dir/src/binheap.c.o
 test_sorting: CMakeFiles/test_sorting.dir/src/bubble_sort.c.o
 test_sorting: CMakeFiles/test_sorting.dir/src/heap_sort.c.o
 test_sorting: CMakeFiles/test_sorting.dir/src/insertion_sort.c.o
@@ -234,7 +249,7 @@ test_sorting: CMakeFiles/test_sorting.dir/src/total_order.c.o
 test_sorting: CMakeFiles/test_sorting.dir/src/utilities.c.o
 test_sorting: CMakeFiles/test_sorting.dir/build.make
 test_sorting: CMakeFiles/test_sorting.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/leonardo/DSSC/Algorithms/Homeworks/Algorithm_Exam/04/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Linking C executable test_sorting"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/leonardo/DSSC/Algorithms/Homeworks/Algorithm_Exam/04/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Linking C executable test_sorting"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/test_sorting.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

@@ -3,7 +3,6 @@
 
 #include <stdlib.h>
 
-#include "total_order.h"
 #include "binheap.h"
 
 /**********************************************************************

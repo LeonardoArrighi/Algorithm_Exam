@@ -142,6 +142,33 @@ test_sorting/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_sorting.dir/build.make CMakeFiles/test_sorting.dir/build
 .PHONY : test_sorting/fast
 
+src/binheap.o: src/binheap.c.o
+
+.PHONY : src/binheap.o
+
+# target to build an object file
+src/binheap.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_sorting.dir/build.make CMakeFiles/test_sorting.dir/src/binheap.c.o
+.PHONY : src/binheap.c.o
+
+src/binheap.i: src/binheap.c.i
+
+.PHONY : src/binheap.i
+
+# target to preprocess a source file
+src/binheap.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_sorting.dir/build.make CMakeFiles/test_sorting.dir/src/binheap.c.i
+.PHONY : src/binheap.c.i
+
+src/binheap.s: src/binheap.c.s
+
+.PHONY : src/binheap.s
+
+# target to generate assembly for a file
+src/binheap.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_sorting.dir/build.make CMakeFiles/test_sorting.dir/src/binheap.c.s
+.PHONY : src/binheap.c.s
+
 src/bubble_sort.o: src/bubble_sort.c.o
 
 .PHONY : src/bubble_sort.o
@@ -421,6 +448,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... test_sorting"
+	@echo "... src/binheap.o"
+	@echo "... src/binheap.i"
+	@echo "... src/binheap.s"
 	@echo "... src/bubble_sort.o"
 	@echo "... src/bubble_sort.i"
 	@echo "... src/bubble_sort.s"

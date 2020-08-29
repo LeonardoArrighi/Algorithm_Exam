@@ -77,7 +77,7 @@ const void *extract_min(binheap_type *H);
  * @param leq is the total order characterizing the heap.
  * @return a pointer to the new binary heap.
  **********************************************************************/
-binheap_type *build_heap(void *A, 
+binheap_type* build_heap(void* A, 
                          const unsigned int num_of_elem, 
                          const unsigned int max_size, 
                          const size_t key_size, 

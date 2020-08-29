@@ -7,7 +7,7 @@
 #include <stdbool.h>
 #include <limits.h>
 
-#define MAX_SIZE 13
+#define MAX_SIZE 20
 
 void int_printer(const void* value)
 {

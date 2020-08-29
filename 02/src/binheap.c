@@ -20,56 +20,58 @@ int is_heap_empty(const binheap_type *H)
     return (H->num_of_elem == 0);
 }
 
-const void* min_value(const binheap_type *H)
+const void* min_value(const binheap_type* H)
 {
     if (is_heap_empty(H))
     {
         return NULL;
     }
-    
+
     return ADDR(H, 0);
 }
 
-void swap_keys(binheap_type * H, unsigned int a, unsigned int b)
+void swap_keys(binheap_type* H, unsigned int n_a, unsigned int n_b)
 {
-    void* pa = ADDR(H, a);
-    void* pb = ADDR(H, b);
+    void* p_a = ADDR(H, n_a);
+    void* p_b = ADDR(H, n_b);
     void* tmp = malloc(H->key_size);
 
-    memcpy(tmp, pa, H->key_size);
-    memcpy(pa, pb, H->key_size);
-    memcpy(pb, tmp, H->key_size);
-    
+    memcpy(tmp, p_a, H->key_size);
+    memcpy(p_a, p_b, H->key_size);
+    memcpy(p_b, tmp, H->key_size);
+
     free(tmp);
 }
 
 void heapify(binheap_type* H, unsigned int node)
 {
-    unsigned int dst_node = node;
-    unsigned int child; 
+    unsigned int dst_node = node, child;
 
     do
     {
         node = dst_node;
+        
+        child =RIGHT(node);
 
-        child = RIGHT(node);
-        if (IS_VALID_NODE(H, child) && H->leq(ADDR(H, child), ADDR(H, node)))
+        if (IS_VALID_NODE(H, child) && H->leq(ADDR(H, child), ADDR(H, dst_node)))
         {
-           dst_node= child;
+            dst_node = child;
         }
 
         child = LEFT(node);
-        if (IS_VALID_NODE(H, child) && H->leq(ADDR(H, child), ADDR(H, node)))
-        {
-           dst_node= child;   
-        }
 
-        if(dst_node != node)
+        if (IS_VALID_NODE(H, child) && H->leq(ADDR(H, child), ADDR(H, dst_node)))
+        {
+            dst_node = child;
+        }
+        
+        if (dst_node != node)
         {
             swap_keys(H, dst_node, node);
         }
     } while (dst_node != node);
 }
+
 
 const void* extract_min(binheap_type* H)
 {
@@ -78,26 +80,26 @@ const void* extract_min(binheap_type* H)
         return NULL;
     }
 
-    swap_keys(H, 0, H->num_of_elem-1);
+    swap_keys(H, 0, H->num_of_elem - 1);
 
     H->num_of_elem--;
 
     heapify(H, 0);
 
-    return ADDR(H, H->num_of_elem+1);
+    return ADDR(H, H->num_of_elem + 1);
 }
 
 const void* find_the_max(void* A, const unsigned int num_of_elem,
-                         const unsigned int key_size, total_order_type leq)
+                         const size_t key_size, total_order_type leq)
 {
-    if(num_of_elem == 0)
+    if (num_of_elem == 0)
     {
         return NULL;
     }
 
     const void* max_value = A;
 
-    for(const void* addr = A + key_size; addr != A + num_of_elem * key_size; addr += key_size)
+    for (const void* addr = A + key_size; addr != A + num_of_elem * key_size; addr += key_size)
     {
         if (!leq(addr, max_value))
         {
@@ -149,7 +151,7 @@ void delete_heap(binheap_type *H)
     free(H);   
 }
 
-const void *decrease_key(binheap_type *H, void *node, const void *value)
+const void* decrease_key(binheap_type *H, void *node, const void *value)
 {
     unsigned int node_x = INDEX_OF(H, node);
 
@@ -179,7 +181,7 @@ const void *decrease_key(binheap_type *H, void *node, const void *value)
     return node;
 }
 
-const void *insert_value(binheap_type *H, const void *value)
+const void* insert_value(binheap_type *H, const void *value)
 {
     // if heap is full
     if (H->max_size == H->num_of_elem)
