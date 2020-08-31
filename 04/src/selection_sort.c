@@ -1,6 +1,8 @@
 #include "selection_sort.h"
 #include "swap.h"
 
+#define POS(elem) (A + elem * elem_size)
+
 void selection_sort(void *A, const unsigned int n, 
                     const size_t elem_size, 
                     total_order leq)
@@ -10,11 +12,11 @@ void selection_sort(void *A, const unsigned int n,
         size_t max_j = 0;
         for(size_t j = 1; j <= i; j++)
         {
-            if(!leq(A + j * elem_size, A + max_j * elem_size))
+            if(!leq(POS(j), POS(max_j)))
             {
                 max_j = j;
             }
         }
-        swap(A + max_j * elem_size, A + i * elem_size, elem_size);
+        swap(POS(max_j), POS(i), elem_size);
     }
 }

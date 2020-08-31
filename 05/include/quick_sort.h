@@ -5,6 +5,10 @@
 
 #include "total_order.h"
 
+typedef struct {
+  unsigned int first;
+  unsigned int second;
+} pair_type;
 
 /**********************************************************************
  * An implementation for the Partition algorithm.
