@@ -5,6 +5,11 @@
 
 #include "total_order.h"
 
+typedef struct {
+  unsigned int first;
+  unsigned int second;
+} pair;
+
 /**********************************************************************
  * An implementation for the Select algorithm.
  *
@@ -22,7 +27,7 @@
  * @param elem_size is the type size in bytes of the elements in A.
  * @param leq is the total order to be satisfied by the sorting.
  **********************************************************************/
-unsigned int select_index(void *A, const unsigned int n, 
+unsigned int select_pivot(void *A, const unsigned int n, 
                           const unsigned int i,
                           const size_t elem_size, 
                           total_order leq);
@@ -50,4 +55,27 @@ void quick_sort_select(void *A, const unsigned int n,
                        const size_t elem_size, 
                        total_order leq);
 
+/**********************************************************************
+ * An implementation for the Three-Way Partition problem.
+ *
+ * This problem, which is known as Dutch national flag problem, is
+ * solved with a three way partitioning function that groups items 
+ * less than a given key, equal to the key and greater than the key.
+ *
+ * @param A is the array to be sorted. This array is also used to 
+ *          store the output of the function.
+ * @param left is the first index of the subarrays of elements 
+ *          lower than key
+ * @param right is the first index of the subarrays of elements 
+ *          higher than key
+ * @param pivot is the first index of the subarrays of elements 
+ *          equal than key
+ * @param elem_size is the type size in bytes of the elements in A.
+ * @param leq is the total order to be satisfied by the sorting.
+ **********************************************************************/
+pair threePartition(void* A, const unsigned int left,
+                    const unsigned int right,
+                    const unsigned int pivot,
+                    const size_t elem_size,
+                    total_order leq);
 #endif // __SELECT__

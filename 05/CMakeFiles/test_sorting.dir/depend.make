@@ -33,6 +33,7 @@ CMakeFiles/test_sorting.dir/src/main.c.o: include/utilities.h
 
 CMakeFiles/test_sorting.dir/src/quick_sort.c.o: src/quick_sort.c
 CMakeFiles/test_sorting.dir/src/quick_sort.c.o: include/quick_sort.h
+CMakeFiles/test_sorting.dir/src/quick_sort.c.o: include/select.h
 CMakeFiles/test_sorting.dir/src/quick_sort.c.o: include/swap.h
 CMakeFiles/test_sorting.dir/src/quick_sort.c.o: include/total_order.h
 

@@ -34,6 +34,7 @@ CMakeFiles/test_sorting.dir/src/main.c.o
 CMakeFiles/test_sorting.dir/src/quick_sort.c.o
  /home/leonardo/DSSC/Algorithms/Homeworks/Algorithm_Exam/05/src/quick_sort.c
  include/quick_sort.h
+ include/select.h
  include/swap.h
  include/total_order.h
 CMakeFiles/test_sorting.dir/src/select.c.o

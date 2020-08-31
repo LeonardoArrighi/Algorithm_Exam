@@ -4,11 +4,7 @@
 #include <stdlib.h>
 
 #include "total_order.h"
-
-typedef struct {
-  unsigned int first;
-  unsigned int second;
-} pair_type;
+#include "select.h"
 
 /**********************************************************************
  * An implementation for the Partition algorithm.
@@ -63,12 +59,13 @@ void quick_sort(void *A, const unsigned int n,
  * 
  * @param A is the array to be sorted. This array is also used to 
  *          store the output of the function.
- * @param idx_l initial index of the array
- * @param idx_r final index of the array
+ * @param n is the number of element of A.
+ * @param idx_l initial index of the array.
+ * @param idx_r final index of the array.
  * @param elem_size is the type size in bytes of the elements in A.
  * @param leq is the total order to be satisfied by the sorting.
  **********************************************************************/
-void quick(void* A, void* idx_l, void* idx_r,
+void quick(void* A, const unsigned int n, void* idx_l, void* idx_r,
            const size_t elem_size, 
            total_order leq);           
 
