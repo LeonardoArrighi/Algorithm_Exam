@@ -55,8 +55,40 @@ unsigned int select_aux(void* A, const unsigned int n,
                           const size_t elem_size, 
                           total_order leq)
 {
-    return 0;
+    if (n <= 10)
+    {
+        insertion_sort(A, n, elem_size, leq);
+        return i;
+    }
+
+    unsigned int j = select_pivot(A, n, elem_size, leq);
+    pair k = threePartition(A, 0, n - 1, j, elem_size, leq);
+
+    if(i < k.first)
+    {
+        if(k.first > 0)
+        {
+            return select_aux(A, k.first - 1, i, elem_size, leq);
+        }
+        else
+        {
+            return k.first;
+        }
+    }
     
+    if(i > k.second)
+    {
+        if(k.second < n)
+        {
+            return select_aux(POS(k.second), n - k.second - 1, i, elem_size, leq);
+        }
+        else
+        {
+            return k.second;
+        }
+    }
+    
+    return i;    
 }
 
 // median of medians
@@ -64,21 +96,23 @@ unsigned int select_pivot (void* A, const unsigned int n,
             const size_t elem_size, 
             total_order leq)
 {
-    if (n < 10)
+    unsigned int last = n - 1;
+
+    if(n < 10) //base case
     {
         insertion_sort(A, n, elem_size, leq);
         return n / 2;
     }
 
-    int chunks = n/5;
+    int chunks = n / 5;
 
-    for(unsigned int i = 0; i <= chunks; i++)
+    for(unsigned int i = 0; i < chunks; i++)
     {
-        unsigned int start = 5 * i;
-        unsigned int end = ((5 * i + 4) <= (n - 1)) ? 5 * i + 4 : (n - 1); 
-        unsigned int n_in = end - start + 1;
-        insertion_sort(POS(start), n_in, elem_size, leq);
-        unsigned int median = ((5 * i + 2) < (n- 1)) ? 5 * i + 2 : (n - 1);
+        int start = (5 * i); 
+        int end = (5 * i + 4 < last) ? 5 * i + 4 : last; 
+        int n = end - start + 1;
+        insertion_sort(POS(start), n, elem_size, leq);
+        int median = (5 * i + 2 < last) ? 5 * i + 2 : last; 
         swap(POS(i), POS(median), elem_size);
     }
 
@@ -86,11 +120,24 @@ unsigned int select_pivot (void* A, const unsigned int n,
 }
 
 
+void quick_select(void* A, const unsigned int n, 
+           size_t l, size_t r,
+           const size_t elem_size, 
+           total_order leq)
+{
+    while(l < r)
+    {
+        unsigned int j = l + select_pivot(POS(l), r - l, elem_size, leq);
+        pair p = threePartition(A, l, r - 1, j, elem_size, leq);
+        quick_select(A, n, l, p.first, elem_size, leq);
+        l = p.second + 1;
+    }
+}
+
 
 void quick_sort_select(void *A, const unsigned int n, 
                        const size_t elem_size, 
                        total_order leq)
 {
-   select_pivot(A, n, elem_size, leq);
-   return;
+   quick_select(A, n, 0, n, elem_size, leq);
 }
