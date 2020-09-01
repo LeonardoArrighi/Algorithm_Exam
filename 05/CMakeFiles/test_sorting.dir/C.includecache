@@ -14,11 +14,19 @@ swap.h
 stdio.h
 -
 
+include/insertion_sort.h
+stdlib.h
+-
+total_order.h
+include/total_order.h
+
 include/select.h
 stdlib.h
 -
 total_order.h
 include/total_order.h
+insertion_sort.h
+include/insertion_sort.h
 
 include/swap.h
 stdlib.h

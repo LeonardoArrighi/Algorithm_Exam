@@ -2,36 +2,9 @@
 #define __QUICK_SORT__
 
 #include <stdlib.h>
-
+#include "swap.h"
 #include "total_order.h"
 #include "select.h"
-
-/**********************************************************************
- * An implementation for the Partition algorithm.
- *
- * This function implements the Partition algorithm which is an in-place
- * algorithm useful to improve the Quick-Sort algorithm. Partition selects
- * an element as a pivot element around which to partition the subarray of
- * A. As the procedure runs, it partitions the array into 4 regions: pivot
- * region, elements lower than pivot, elements higher than pivot and 
- * elements not evalued yet. 
- * If the fuction `leq` costs Theta(1), then the execution of this 
- * function takes time O(n^2)\cap Omega(n \log n) where n is the 
- * number of elements in the array.
- *
- * @param A is the array to be sorted. This array is also used to 
- *          store the output of the function.
- * @param elem_size is the type size in bytes of the elements in A.
- * @param l is the left index which indicates the last element of 
- *          "lower-than-pivot" region
- * @param r is the right index which indicates the first element of 
- *          "higher-than-pivot" region
- * @param pivot is the pivot index
- * @param leq is the total order to be satisfied by the sorting.
- **********************************************************************/
-int partition(void* A, const size_t elem_size,
-               size_t l, size_t r, size_t pivot,
-               total_order leq);
 
 /**********************************************************************
  * An implementation for the Quick Sort algorithm.

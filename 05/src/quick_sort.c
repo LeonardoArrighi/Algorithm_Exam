@@ -1,8 +1,4 @@
 #include "quick_sort.h"
-#include "swap.h"
-#include "total_order.h"
-#include "select.h"
-#include <stdio.h>
 
 #define CONV(elem) (((elem) - A)/elem_size)
 #define POS(elem) (A + (elem) * elem_size)

@@ -29,16 +29,19 @@ CMakeFiles/test_sorting.dir/src/main.c.o
  include/quick_sort.h
  include/select.h
  include/selection_sort.h
+ include/swap.h
  include/total_order.h
  include/utilities.h
 CMakeFiles/test_sorting.dir/src/quick_sort.c.o
  /home/leonardo/DSSC/Algorithms/Homeworks/Algorithm_Exam/05/src/quick_sort.c
+ include/insertion_sort.h
  include/quick_sort.h
  include/select.h
  include/swap.h
  include/total_order.h
 CMakeFiles/test_sorting.dir/src/select.c.o
  /home/leonardo/DSSC/Algorithms/Homeworks/Algorithm_Exam/05/src/select.c
+ include/insertion_sort.h
  include/select.h
  include/swap.h
  include/total_order.h

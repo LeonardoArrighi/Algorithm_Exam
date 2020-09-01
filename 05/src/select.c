@@ -6,15 +6,6 @@
 #define CONST(elem) (const void*) (A + ((elem) * elem_size))
 
 
-unsigned int select_pivot(void *A, const unsigned int n, 
-                          const unsigned int i,
-                          const size_t elem_size, 
-                          total_order leq)
-{
-    return 0;	
-}
-
-
 pair threePartition(void* A, const unsigned int left,
                     const unsigned int right,
                     const unsigned int pivot,
@@ -59,31 +50,40 @@ pair threePartition(void* A, const unsigned int left,
     return pivots;
 }
 
-// unsigned int select()
-// {
-//     return 0;
-// }
+unsigned int select_aux(void* A, const unsigned int n, 
+                          const unsigned int i,
+                          const size_t elem_size, 
+                          total_order leq)
+{
+    return 0;
+    
+}
 
-// void select_aux()
-// {
-//     return;
-// }
+// median of medians
+unsigned int select_pivot (void* A, const unsigned int n, 
+            const size_t elem_size, 
+            total_order leq)
+{
+    if (n < 10)
+    {
+        insertion_sort(A, n, elem_size, leq);
+        return n / 2;
+    }
 
+    int chunks = n/5;
 
-// // median of medians
-// void median ()
-// {  
-//     return;
-// }
+    for(unsigned int i = 0; i <= chunks; i++)
+    {
+        unsigned int start = 5 * i;
+        unsigned int end = ((5 * i + 4) <= (n - 1)) ? 5 * i + 4 : (n - 1); 
+        unsigned int n_in = end - start + 1;
+        insertion_sort(POS(start), n_in, elem_size, leq);
+        unsigned int median = ((5 * i + 2) < (n- 1)) ? 5 * i + 2 : (n - 1);
+        swap(POS(i), POS(median), elem_size);
+    }
 
-
-
-
-// void quick_sort_select_aux()
-// {
-//     return;
-// }
-
+    return select_aux(A, chunks, chunks / 2, elem_size, leq);
+}
 
 
 
@@ -91,5 +91,6 @@ void quick_sort_select(void *A, const unsigned int n,
                        const size_t elem_size, 
                        total_order leq)
 {
+   select_pivot(A, n, elem_size, leq);
    return;
 }
