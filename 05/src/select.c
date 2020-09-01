@@ -62,29 +62,29 @@ unsigned int select_aux(void* A, const unsigned int n,
     }
 
     unsigned int j = select_pivot(A, n, elem_size, leq);
-    pair k = threePartition(A, 0, n - 1, j, elem_size, leq);
+    pair p = threePartition(A, 0, n - 1, j, elem_size, leq);
 
-    if(i < k.first)
+    if(i < p.first)
     {
-        if(k.first > 0)
+        if(p.first > 0)
         {
-            return select_aux(A, k.first - 1, i, elem_size, leq);
+            return select_aux(A, p.first - 1, i, elem_size, leq);
         }
         else
         {
-            return k.first;
+            return p.first;
         }
     }
     
-    if(i > k.second)
+    if(i > p.second)
     {
-        if(k.second < n)
+        if(p.second < n)
         {
-            return select_aux(POS(k.second), n - k.second - 1, i, elem_size, leq);
+            return select_aux(POS(p.second), n - p.second - 1, i, elem_size, leq);
         }
         else
         {
-            return k.second;
+            return p.second;
         }
     }
     
@@ -104,15 +104,15 @@ unsigned int select_pivot (void* A, const unsigned int n,
         return n / 2;
     }
 
-    int chunks = n / 5;
+    unsigned int chunks = n / 5;
 
     for(unsigned int i = 0; i < chunks; i++)
     {
-        int start = (5 * i); 
-        int end = (5 * i + 4 < last) ? 5 * i + 4 : last; 
-        int n = end - start + 1;
+        unsigned int start = (5 * i); 
+        unsigned int end = (5 * i + 4 < last) ? 5 * i + 4 : last; 
+        unsigned int n = end - start + 1;
         insertion_sort(POS(start), n, elem_size, leq);
-        int median = (5 * i + 2 < last) ? 5 * i + 2 : last; 
+        unsigned int median = (5 * i + 2 < last) ? 5 * i + 2 : last; 
         swap(POS(i), POS(median), elem_size);
     }
 
